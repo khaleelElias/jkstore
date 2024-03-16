@@ -11,11 +11,24 @@ CREATE TABLE IF NOT EXISTS stores (
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(50) NOT NULL,
     url VARCHAR(255) NOT NULL,
-    district 
+    district VARCHAR(100), 
 	content TEXT NOT NULL,
-	userOfPost VARCHAR(50) NOT NULL,
-	dateCreated DATE NOT NULL,
-	FOREIGN KEY (club) REFERENCES clubs(name),
-	FOREIGN KEY (userOfPost) REFERENCES accounts(username),
-	CONSTRAINT titleUnique UNIQUE (title)
 );
+
+CREATE TABLE IF NOT EXISTS restaurants (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(50) NOT NULL,
+    url VARCHAR(255) NOT NULL,
+    district VARCHAR(100), 
+	content TEXT NOT NULL,
+);
+
+CREATE TABLE IF NOT EXISTS bars (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(50) NOT NULL,
+    url VARCHAR(255) NOT NULL,
+    district VARCHAR(100), 
+	content TEXT NOT NULL,
+);
+
+ 
